@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Banana Bread Pistaches</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script type="module" src="../assets/recipe.js"></script>
+  </head>
+  <body data-recipe="banana-bread-pistaccio">
+    <nav class="detail-nav">
+      <a href="../index.html" aria-label="Back">←</a>
+    </nav>
+    <main class="recipe-page">
+      <article class="recipe">
+        <header class="recipe-heading">
+          <h1 id="recipe-title">Banana Bread Pistaches</h1>
+          <div class="recipe-meta-row">
+            <dl class="recipe-properties" id="recipe-properties" hidden></dl>
+            <div class="recipe-tags" id="recipe-tags"></div>
+          </div>
+        </header>
+        <section class="ingredients">
+          <div class="ingredients-heading">
+            <h2 class="ingredients-title">Ingredients</h2>
+            <div class="servings" id="servings-control" hidden>
+              <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
+              <span><strong id="servings-count"></strong>×</span>
+              <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
+            </div>
+          </div>
+          <ul id="ingredient-list"></ul>
+        </section>
+        <div class="recipe-content" id="recipe-content"></div>
+        <div class="recipe-gallery" id="recipe-gallery"></div>
+      </article>
+    </main>
+
+    <template id="recipe-tag-template">
+      <a class="tag" data-recipe-tag></a>
+    </template>
+    <template id="recipe-property-template">
+      <div class="recipe-property">
+        <dt data-property-name></dt>
+        <dd data-property-value></dd>
+      </div>
+    </template>
+    <template id="ingredient-template">
+      <li data-list-ingredient></li>
+    </template>
+    <template id="photo-template">
+      <figure><img loading="lazy"></figure>
+    </template>
+  </body>
+</html>
