@@ -1,6 +1,6 @@
-const recipes = await fetch("./recipes.json").then((response) =>
-  response.json(),
-);
+// Versioned URL from the preload link, so the preloaded response is reused.
+const recipesUrl = document.querySelector("#recipes-data").href;
+const recipes = await fetch(recipesUrl).then((response) => response.json());
 const searchInput = document.querySelector("#recipe-search");
 const tagCloud = document.querySelector("#tag-cloud");
 const recipeGrid = document.querySelector("#recipe-grid");
