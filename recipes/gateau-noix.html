@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/style.css">
     <script type="module" src="../assets/recipe.js"></script>
   </head>
-  <body data-recipe="gateau-noix">
+  <body>
     <nav class="detail-nav">
       <a href="../index.html" aria-label="Back">←</a>
     </nav>
@@ -16,8 +16,8 @@
         <header class="recipe-heading">
           <h1 id="recipe-title">Gâteau aux noix</h1>
           <div class="recipe-meta-row">
-            <dl class="recipe-properties" id="recipe-properties" hidden></dl>
-            <div class="recipe-tags" id="recipe-tags"></div>
+            <dl class="recipe-properties" id="recipe-properties"><div class="recipe-property"><dt>preparation</dt><dd>15min</dd></div><div class="recipe-property"><dt>cuisson</dt><dd>30min</dd></div><div class="recipe-property"><dt>lang</dt><dd>fr</dd></div></dl>
+            <div class="recipe-tags" id="recipe-tags"><a class="tag" href="../index.html?tag=dessert">dessert</a></div>
           </div>
         </header>
         <section class="ingredients">
@@ -29,32 +29,27 @@
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="250.0" data-unit="g" data-name="de noix">250 g de noix</li><li data-ingredient data-amount="6.0" data-unit="" data-name="jaunes d&#x27;oeuf">6 jaunes d&#x27;oeuf</li><li data-ingredient data-amount="200.0" data-unit="g" data-name="de sucre">200 g de sucre</li><li data-ingredient data-amount="50.0" data-unit="g" data-name="de chapelure">50 g de chapelure</li><li data-ingredient data-amount="6.0" data-unit="" data-name="blancs d&#x27;oeuf">6 blancs d&#x27;oeuf</li></ul>
         </section>
-        <div class="recipe-content" id="recipe-content"></div>
+        <div class="recipe-content" id="recipe-content"><p>De Mamie Lucette.</p>
+<h1>Préparation</h1>
+<p>Préchauffer le four à <em>180ºC</em>.</p>
+<h2>Étape 1</h2>
+<p>Mixer <span data-ingredient data-amount="250.0" data-unit="g" data-name="de noix">250 g de noix</span>.</p>
+<h2>Étape 2</h2>
+<p>Battre les <span data-ingredient data-amount="6.0" data-unit="" data-name="jaunes d&#x27;oeuf">6 jaunes d&#x27;oeuf</span> avec <span data-ingredient data-amount="200.0" data-unit="g" data-name="de sucre">200 g de sucre</span>. Incorporer les noix et <span data-ingredient data-amount="50.0" data-unit="g" data-name="de chapelure">50 g de chapelure</span>.</p>
+<h2>Étape 3</h2>
+<p>Incorporer délicatement <span data-ingredient data-amount="6.0" data-unit="" data-name="blancs d&#x27;oeuf">6 blancs d&#x27;oeuf</span> montés en neige.</p>
+<h2>Étape 4</h2>
+<p>Enfourner pendant 30min.</p>
+</div>
         <div class="recipe-gallery" id="recipe-gallery"></div>
       </article>
     </main>
     <footer class="site-footer">
-      This recipe website was built with
-      <a href="https://github.com/leplatrem/recettes">Recettes</a>, free software
-      that turns Markdown files into a website.
+      Built with
+      <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
+      that turns Markdown files into a recipes website.
     </footer>
-
-    <template id="recipe-tag-template">
-      <a class="tag" data-recipe-tag></a>
-    </template>
-    <template id="recipe-property-template">
-      <div class="recipe-property">
-        <dt data-property-name></dt>
-        <dd data-property-value></dd>
-      </div>
-    </template>
-    <template id="ingredient-template">
-      <li data-list-ingredient></li>
-    </template>
-    <template id="photo-template">
-      <figure><img loading="lazy"></figure>
-    </template>
   </body>
 </html>

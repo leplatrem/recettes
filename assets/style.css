@@ -379,7 +379,7 @@ input {
   margin: 5px 0;
 }
 
-.recipe-content [data-ingredient-index] {
+.recipe-content [data-ingredient] {
   padding: 0 2px;
   border-radius: 3px;
   background: var(--accent-soft);

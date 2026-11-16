@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/style.css">
     <script type="module" src="../assets/recipe.js"></script>
   </head>
-  <body data-recipe="sirop-citron-gingembre">
+  <body>
     <nav class="detail-nav">
       <a href="../index.html" aria-label="Back">←</a>
     </nav>
@@ -16,45 +16,38 @@
         <header class="recipe-heading">
           <h1 id="recipe-title">Sirop de citron au gingembre</h1>
           <div class="recipe-meta-row">
-            <dl class="recipe-properties" id="recipe-properties" hidden></dl>
-            <div class="recipe-tags" id="recipe-tags"></div>
+            <dl class="recipe-properties" id="recipe-properties"><div class="recipe-property"><dt>preparation</dt><dd>10min</dd></div><div class="recipe-property"><dt>cuisson</dt><dd>45min</dd></div><div class="recipe-property"><dt>lang</dt><dd>fr</dd></div></dl>
+            <div class="recipe-tags" id="recipe-tags"><a class="tag" href="../index.html?tag=jus">jus</a><a class="tag" href="../index.html?tag=facile">facile</a><a class="tag" href="../index.html?tag=%C3%A9conomique">économique</a><a class="tag" href="../index.html?tag=sain">sain</a></div>
           </div>
         </header>
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
-            <div class="servings" id="servings-control" hidden>
+            <div class="servings" id="servings-control" data-portions="20">
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
-              <span><strong id="servings-count"></strong>×</span>
+              <span><strong id="servings-count">20</strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="0.5" data-unit="l" data-name="de jus de citron">0.5 l de jus de citron</li><li data-ingredient data-amount="300.0" data-unit="g" data-name="de gingembre frais">300 g de gingembre frais</li><li data-ingredient data-amount="0.5" data-unit="l" data-name="d&#x27;eau">0.5 l d&#x27;eau</li><li data-ingredient data-amount="100.0" data-unit="g" data-name="de sucre">100 g de sucre</li></ul>
         </section>
-        <div class="recipe-content" id="recipe-content"></div>
-        <div class="recipe-gallery" id="recipe-gallery"></div>
+        <div class="recipe-content" id="recipe-content"><h1>Préparation</h1>
+<h2>Étape 1</h2>
+<p>Exprimer <span data-ingredient data-amount="0.5" data-unit="l" data-name="de jus de citron">0.5 l de jus de citron</span>.</p>
+<h2>Étape 2</h2>
+<p>Peler et triturer <span data-ingredient data-amount="300.0" data-unit="g" data-name="de gingembre frais">300 g de gingembre frais</span>, à l’aide d’un mixeur.</p>
+<h2>Étape 3</h2>
+<p>Faire bouillir le mélange à feu doux avec <span data-ingredient data-amount="0.5" data-unit="l" data-name="d&#x27;eau">0.5 l d&#x27;eau</span> et <span data-ingredient data-amount="100.0" data-unit="g" data-name="de sucre">100 g de sucre</span>.</p>
+<h2>Étape 4</h2>
+<p>Passer le résultat au blender.</p>
+</div>
+        <div class="recipe-gallery" id="recipe-gallery"><figure><img loading="lazy" src="../assets/images/sirop-citron-gingembre-1.jpeg" alt="Sirop de citron au gingembre 1"></figure><figure><img loading="lazy" src="../assets/images/sirop-citron-gingembre-2.jpeg" alt="Sirop de citron au gingembre 2"></figure><figure><img loading="lazy" src="../assets/images/sirop-citron-gingembre-3.jpeg" alt="Sirop de citron au gingembre 3"></figure><figure><img loading="lazy" src="../assets/images/sirop-citron-gingembre-4.jpeg" alt="Sirop de citron au gingembre 4"></figure></div>
       </article>
     </main>
     <footer class="site-footer">
-      This recipe website was built with
-      <a href="https://github.com/leplatrem/recettes">Recettes</a>, free software
-      that turns Markdown files into a website.
+      Built with
+      <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
+      that turns Markdown files into a recipes website.
     </footer>
-
-    <template id="recipe-tag-template">
-      <a class="tag" data-recipe-tag></a>
-    </template>
-    <template id="recipe-property-template">
-      <div class="recipe-property">
-        <dt data-property-name></dt>
-        <dd data-property-value></dd>
-      </div>
-    </template>
-    <template id="ingredient-template">
-      <li data-list-ingredient></li>
-    </template>
-    <template id="photo-template">
-      <figure><img loading="lazy"></figure>
-    </template>
   </body>
 </html>
