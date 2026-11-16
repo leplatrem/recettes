@@ -14,7 +14,6 @@ const formatter = new Intl.NumberFormat(recipe.lang || undefined, {
   maximumFractionDigits: 2,
 });
 
-document.documentElement.lang = recipe.lang || "";
 document.title = recipe.title;
 title.textContent = recipe.title;
 

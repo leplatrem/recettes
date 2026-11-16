@@ -9,9 +9,6 @@ const cardTemplate = document.querySelector("#recipe-card-template");
 const recipeTagTemplate = document.querySelector("#recipe-tag-template");
 const params = new URLSearchParams(window.location.search);
 let activeTag = params.get("tag") || "";
-const languages = new Set(recipes.map((recipe) => recipe.lang).filter(Boolean));
-document.documentElement.lang = languages.size === 1 ? [...languages][0] : "";
-
 const tagCounts = new Map();
 for (const recipe of recipes) {
   for (const tag of recipe.tags) {

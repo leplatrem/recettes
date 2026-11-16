@@ -1,15 +1,27 @@
 <!doctype html>
-<html lang="">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recettes</title>
+    <title>Mes Recettes</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="prefetch" href="recipes/banana-bread-pistaccio.html">
+    <link rel="prefetch" href="recipes/caramel.html">
+    <link rel="prefetch" href="recipes/cookies-julia.html">
+    <link rel="prefetch" href="recipes/crackers.html">
+    <link rel="prefetch" href="recipes/flan-coco.html">
+    <link rel="prefetch" href="recipes/gateau-noix.html">
+    <link rel="prefetch" href="recipes/granola.html">
+    <link rel="prefetch" href="recipes/pate-galettes.html">
+    <link rel="prefetch" href="recipes/popcorn.html">
+    <link rel="prefetch" href="recipes/sirop-citron-gingembre.html">
+    <link rel="prefetch" href="recipes/soupe-oignon.html">
+    <link rel="prefetch" href="recipes/tarte-citron.html">
     <script type="module" src="assets/app.js"></script>
   </head>
   <body>
     <main class="recipe-index">
-      <h1 class="visually-hidden">Recettes</h1>
+      <h1>Mes Recettes</h1>
       <label class="search-box">
         <span aria-hidden="true">⌕</span>
         <input id="recipe-search" type="search" aria-label="Search recipes" autocomplete="off">
@@ -17,6 +29,11 @@
       <div class="tag-cloud" id="tag-cloud"></div>
       <div class="recipe-grid" id="recipe-grid"></div>
     </main>
+    <footer class="site-footer">
+      Built with
+      <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
+      that turns Markdown files into a recipes website.
+    </footer>
 
     <template id="tag-cloud-item-template">
       <button class="tag-cloud-item" type="button" aria-pressed="false">
