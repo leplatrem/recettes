@@ -1,4 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap");
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/dm-sans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url("fonts/playfair-display.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/playfair-display-italic.woff2") format("woff2");
+}
 
 :root {
   color-scheme: light;
@@ -165,6 +187,49 @@ input {
   padding: 20px;
 }
 
+.card-body {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.recipe-card.has-image > a {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 14px 14px 20px;
+}
+
+.recipe-card.has-image .card-body {
+  padding-top: 6px;
+}
+
+.card-image {
+  width: 112px;
+  aspect-ratio: 1;
+  flex: none;
+  border-radius: 8px;
+  background: #eeeae3;
+  object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .card-image {
+    width: 88px;
+  }
+}
+
+.recipe-card.has-image .card-arrow {
+  display: none;
+}
+
+.recipe-card.has-image h2 {
+  max-width: none;
+}
+
 .recipe-card h2 {
   max-width: calc(100% - 28px);
   margin: 0 0 8px;
@@ -176,14 +241,14 @@ input {
 }
 
 .card-excerpt {
-  display: -webkit-box;
   overflow: hidden;
+  align-self: stretch;
   margin: 0 0 14px;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.5;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-arrow {
@@ -207,6 +272,11 @@ input {
   font-size: 1rem;
 }
 
+.recipe-card .tag {
+  padding: 3px 8px;
+  font-size: 0.8rem;
+}
+
 .recipe-page {
   width: min(100% - 36px, 760px);
   margin: 0 auto;
@@ -214,6 +284,8 @@ input {
 }
 
 .detail-nav {
+  display: flex;
+  justify-content: space-between;
   width: min(100% - 36px, 760px);
   margin: 0 auto;
   padding-top: 12px;
@@ -387,25 +459,72 @@ input {
   font-weight: 600;
 }
 
-.recipe-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin: 30px 0;
-}
-
-.recipe-gallery figure {
+.recipe-main-image {
   overflow: hidden;
-  margin: 0;
+  margin: 0 0 32px;
   border-radius: 10px;
   background: #eeeae3;
 }
 
-.recipe-gallery img {
+.recipe-main-image img {
   width: 100%;
-  max-height: 500px;
+  height: clamp(220px, 45vw, 420px);
   display: block;
   object-fit: cover;
+  object-position: center;
+}
+
+/* Column masonry: images keep their natural ratio, no cropping, no blank space.
+   Multi-column layout as the baseline, CSS grid-lanes where supported (keeps reading order). */
+.recipe-step-images,
+.recipe-gallery {
+  column-gap: 12px;
+}
+
+.recipe-step-images {
+  margin: 4px 0 12px;
+}
+
+.recipe-gallery {
+  margin: 30px 0 18px;
+}
+
+.recipe-step-images figure,
+.recipe-gallery figure {
+  overflow: hidden;
+  margin: 0 0 12px;
+  border-radius: 10px;
+  background: #eeeae3;
+  break-inside: avoid;
+}
+
+.recipe-step-images img,
+.recipe-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@supports (display: grid-lanes) {
+  .recipe-step-images,
+  .recipe-gallery {
+    display: grid-lanes;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .recipe-step-images {
+    margin-bottom: 24px;
+  }
+
+  .recipe-gallery {
+    margin-bottom: 30px;
+  }
+
+  .recipe-step-images figure,
+  .recipe-gallery figure {
+    margin: 0;
+  }
 }
 
 .visually-hidden {
@@ -445,7 +564,10 @@ input {
     column-gap: 24px;
   }
 
-  .recipe-gallery {
+  /* Two columns only when there is more than one image. */
+  .recipe-step-images:has(figure + figure),
+  .recipe-gallery:has(figure + figure) {
+    columns: 2;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

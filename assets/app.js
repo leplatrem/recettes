@@ -46,6 +46,12 @@ for (const recipe of recipes) {
   const excerpt = card.querySelector("[data-recipe-excerpt]");
   excerpt.textContent = recipe.excerpt;
   excerpt.hidden = !recipe.excerpt;
+  if (recipe.image) {
+    const image = card.querySelector("[data-recipe-image]");
+    image.src = recipe.image;
+    image.hidden = false;
+    card.classList.add("has-image");
+  }
   const recipeTags = card.querySelector("[data-recipe-tags]");
   for (const tag of recipe.tags) {
     const tagFragment = recipeTagTemplate.content.cloneNode(true);
