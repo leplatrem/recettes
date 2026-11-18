@@ -487,6 +487,11 @@ input {
   letter-spacing: -0.025em;
 }
 
+.recipe-content em {
+  font-style: normal;
+  font-weight: 500;
+}
+
 .recipe-content p {
   margin: 0 0 16px;
 }
