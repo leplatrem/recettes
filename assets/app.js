@@ -2,6 +2,7 @@
 const recipesUrl = document.querySelector("#recipes-data").href;
 const recipes = await fetch(recipesUrl).then((response) => response.json());
 const searchInput = document.querySelector("#recipe-search");
+searchInput.placeholder = `Search ${recipes.length} recipes`;
 const tagCloud = document.querySelector("#tag-cloud");
 const recipeGrid = document.querySelector("#recipe-grid");
 const tagTemplate = document.querySelector("#tag-cloud-item-template");
