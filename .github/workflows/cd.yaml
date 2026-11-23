@@ -25,11 +25,25 @@ jobs:
       - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
       - name: Install Recettes
         run: uv tool install recettes
+      - name: Restore picture cache
+        id: restore-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .recettes-cache
+          key: recettes-images-${{ github.sha }}
+          restore-keys: recettes-images-
       - name: Build recipe website
         run: recettes build recipes --destination site --title "Mes Recettes"
+      - name: Save picture cache
+        if: steps.cache-key.outputs.key != steps.restore-cache.outputs.cache-matched-key
+        uses: actions/cache/save@v4
+        with:
+          path: .recettes-cache
+          key: ${{ steps.cache-key.outputs.key }}
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./site
+          cname: recetas.leplat.re
