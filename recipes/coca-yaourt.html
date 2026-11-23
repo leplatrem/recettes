@@ -3,9 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>Coca au yaourt</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="Recette catalane.">
+    <meta property="og:title" content="Coca au yaourt">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/coca-yaourt.html">
+    <meta property="og:description" content="Recette catalane.">
+    <meta property="article:tag" content="dessert">
+    <meta property="article:tag" content="gâteau">
+    <meta property="article:tag" content="facile">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,19 +36,23 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" data-portions="12">
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count">12</strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="400.0" data-unit="g" data-name="de farine">400 g de farine</li><li data-ingredient data-amount="400.0" data-unit="g" data-name="de sucre">400 g de sucre</li><li data-ingredient data-amount="5.0" data-unit="" data-name="oeufs">5 oeufs</li><li data-ingredient data-amount="2.0" data-unit="" data-name="yaourts">2 yaourts</li><li data-ingredient data-amount="0.5" data-unit="" data-name="pot de yaourt d&#x27;huile">0.5 pot de yaourt d&#x27;huile</li><li data-ingredient data-amount="1.0" data-unit="" data-name="zeste de citron râpé">1 zeste de citron râpé</li><li data-ingredient>beurre</li><li data-ingredient data-amount="2.0" data-unit="" data-name="sachets de levure">2 sachets de levure</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="400.0" data-unit="g" data-name="de farine" data-ml="727.27">400 g de farine</li><li data-ingredient data-amount="400.0" data-unit="g" data-name="de sucre" data-ml="470.59">400 g de sucre</li><li data-ingredient data-amount="5.0" data-unit="" data-name="oeufs">5 oeufs</li><li data-ingredient data-amount="2.0" data-unit="" data-name="yaourts">2 yaourts</li><li data-ingredient data-amount="0.5" data-unit="" data-name="pot de yaourt d&#x27;huile">0.5 pot de yaourt d&#x27;huile</li><li data-ingredient data-amount="1.0" data-unit="" data-name="zeste de citron râpé">1 zeste de citron râpé</li><li data-ingredient>beurre</li><li data-ingredient data-amount="2.0" data-unit="" data-name="sachets de levure">2 sachets de levure</li></ul>
         </section>
         
         <div class="recipe-content" id="recipe-content"><p>Recette catalane.</p>
 <h1>Préparation</h1>
 <h2>Étape 1</h2>
-<p><em>Mélanger</em> <span data-ingredient data-amount="400.0" data-unit="g" data-name="de farine">400 g de farine</span>, <span data-ingredient data-amount="400.0" data-unit="g" data-name="de sucre">400 g de sucre</span>, <span data-ingredient data-amount="5.0" data-unit="" data-name="oeufs">5 oeufs</span>, <span data-ingredient data-amount="2.0" data-unit="" data-name="yaourts">2 yaourts</span> (nature ou au citron), <span data-ingredient data-amount="0.5" data-unit="" data-name="pot de yaourt d&#x27;huile">0.5 pot de yaourt d&#x27;huile</span> et le <span data-ingredient data-amount="1.0" data-unit="" data-name="zeste de citron râpé">1 zeste de citron râpé</span>.</p>
+<p><em>Mélanger</em> <span data-ingredient data-amount="400.0" data-unit="g" data-name="de farine" data-ml="727.27">400 g de farine</span>, <span data-ingredient data-amount="400.0" data-unit="g" data-name="de sucre" data-ml="470.59">400 g de sucre</span>, <span data-ingredient data-amount="5.0" data-unit="" data-name="oeufs">5 oeufs</span>, <span data-ingredient data-amount="2.0" data-unit="" data-name="yaourts">2 yaourts</span> (nature ou au citron), <span data-ingredient data-amount="0.5" data-unit="" data-name="pot de yaourt d&#x27;huile">0.5 pot de yaourt d&#x27;huile</span> et le <span data-ingredient data-amount="1.0" data-unit="" data-name="zeste de citron râpé">1 zeste de citron râpé</span>.</p>
 <h2>Étape 2</h2>
 <p><em>Beurrer</em> un moule rectangulaire avec du <span data-ingredient>beurre</span>.</p>
 <h2>Étape 3</h2>
@@ -55,7 +71,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>

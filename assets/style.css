@@ -23,16 +23,47 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --ink: #242821;
   --muted: #77796f;
+  --faint: #a4a399;
+  --tag-ink: #66685e;
   --paper: #faf9f6;
   --surface: #fff;
+  --placeholder: #eeeae3;
   --line: #e7e4dc;
+  --line-soft: #f0eee9;
+  --line-hover: #d8c9bb;
   --accent: #a34e38;
   --accent-soft: #f3e9e2;
+  --accent-ink: #713b2b;
+  --focus: #c49a89;
+  --focus-ring: #a34e3814;
+  --shadow: #3a29100c;
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Follows the browser or system preference (e.g. phone dark mode). */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e9e5dc;
+    --muted: #a3a095;
+    --faint: #75766c;
+    --tag-ink: #bdbaaf;
+    --paper: #181a16;
+    --surface: #22251f;
+    --placeholder: #2d3029;
+    --line: #363a31;
+    --line-soft: #2d3029;
+    --line-hover: #5c4b40;
+    --accent: #e0896d;
+    --accent-soft: #3d2a22;
+    --accent-ink: #f2bba7;
+    --focus: #8f5c49;
+    --focus-ring: #e0896d26;
+    --shadow: #00000066;
+  }
 }
 
 * {
@@ -64,7 +95,7 @@ input {
 
 .site-footer {
   padding: 2rem 1rem;
-  color: var(--muted, #666);
+  color: var(--muted);
   font-size: 0.875rem;
   text-align: center;
 }
@@ -116,8 +147,8 @@ input {
 }
 
 .search-box:focus-within {
-  border-color: #c49a89;
-  box-shadow: 0 0 0 3px #a34e3814;
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 .tag-cloud {
@@ -132,7 +163,7 @@ input {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: transparent;
-  color: #66685e;
+  color: var(--tag-ink);
   font-size: calc(1rem * var(--tag-weight, 1));
   line-height: 1.2;
 }
@@ -144,7 +175,7 @@ input {
 
 .tag-cloud-item [data-tag-count] {
   margin-left: 4px;
-  color: #a4a399;
+  color: var(--faint);
   font-size: 0.75rem;
 }
 
@@ -176,8 +207,8 @@ input {
 
 .recipe-card:hover {
   transform: translateY(-2px);
-  border-color: #d8c9bb;
-  box-shadow: 0 12px 32px #3a29100c;
+  border-color: var(--line-hover);
+  box-shadow: 0 12px 32px var(--shadow);
 }
 
 .recipe-card:hover .card-image {
@@ -219,7 +250,7 @@ input {
   aspect-ratio: 1;
   flex: none;
   border-radius: 8px;
-  background: #eeeae3;
+  background: var(--placeholder);
   object-fit: cover;
   opacity: 0.8;
 }
@@ -258,7 +289,7 @@ input {
   position: absolute;
   top: 17px;
   right: 19px;
-  color: #aaa99f;
+  color: var(--faint);
   font-size: 1rem;
 }
 
@@ -418,6 +449,62 @@ input {
   line-height: 1.2;
 }
 
+.simple-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.simple-toggle[hidden] {
+  display: none;
+}
+
+.simple-toggle input {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  margin: 0;
+  border-radius: 10px;
+  background: var(--line);
+  appearance: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.simple-toggle input::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.15s;
+}
+
+.simple-toggle input:checked {
+  background: var(--accent);
+}
+
+.simple-toggle input:checked::after {
+  transform: translateX(16px);
+}
+
+.simple-toggle input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.simple-toggle input:checked + span {
+  color: var(--ink);
+}
+
 .servings {
   display: flex;
   align-items: center;
@@ -431,7 +518,7 @@ input {
   height: 32px;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: white;
+  background: var(--surface);
   color: var(--ink);
   cursor: pointer;
   line-height: 1;
@@ -458,7 +545,7 @@ input {
 
 #ingredient-list li {
   padding: 0 0 8px;
-  border-bottom: 1px solid #f0eee9;
+  border-bottom: 1px solid var(--line-soft);
   font-size: 1rem;
 }
 
@@ -504,7 +591,7 @@ input {
   padding: 0 2px;
   border-radius: 3px;
   background: var(--accent-soft);
-  color: #713b2b;
+  color: var(--accent-ink);
   font-weight: 600;
 }
 
@@ -512,7 +599,7 @@ input {
   overflow: hidden;
   margin: 0 0 32px;
   border-radius: 10px;
-  background: #eeeae3;
+  background: var(--placeholder);
 }
 
 .recipe-main-image img {
@@ -543,7 +630,7 @@ input {
   overflow: hidden;
   margin: 0 0 12px;
   border-radius: 10px;
-  background: #eeeae3;
+  background: var(--placeholder);
   break-inside: avoid;
 }
 

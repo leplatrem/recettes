@@ -3,9 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>Flan coco</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="Recette express.">
+    <meta property="og:title" content="Flan coco">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/flan-coco.html">
+    <meta property="og:description" content="Recette express.">
+    <meta property="og:image" content="https://leplatrem.github.io/recettes/assets/images/flan-coco.jpg">
+    <meta property="article:tag" content="dessert">
+    <meta property="article:tag" content="flan">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,21 +36,25 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" data-portions="8">
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count">8</strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="3.0" data-unit="" data-name="jaunes d&#x27;oeuf">3 jaunes d&#x27;oeuf</li><li data-ingredient>une boîte de lait concentré</li><li data-ingredient>même dose de lait</li><li data-ingredient data-amount="150.0" data-unit="g" data-name="de coco râpée">150 g de coco râpée</li><li data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeuf">3 blancs d&#x27;oeuf</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="3.0" data-unit="" data-name="jaunes d&#x27;oeuf">3 jaunes d&#x27;oeuf</li><li data-ingredient>une boîte de lait concentré</li><li data-ingredient>même dose de lait</li><li data-ingredient data-amount="150.0" data-unit="g" data-name="de coco râpée" data-ml="428.57">150 g de coco râpée</li><li data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeuf">3 blancs d&#x27;oeuf</li></ul>
         </section>
-        <figure class="recipe-main-image"><img src="../assets/images/flan-coco.png" alt="Flan coco"></figure>
+        <figure class="recipe-main-image"><img src="../assets/images/flan-coco.jpg" alt="Flan coco"></figure>
         <div class="recipe-content" id="recipe-content"><p>Recette express.</p>
 <h1>Préparation</h1>
 <h2>Étape 1</h2>
 <p><em>Mélanger</em> <span data-ingredient data-amount="3.0" data-unit="" data-name="jaunes d&#x27;oeuf">3 jaunes d&#x27;oeuf</span> avec <span data-ingredient>une boîte de lait concentré</span> et la <span data-ingredient>même dose de lait</span>.</p>
 <h2>Étape 2</h2>
-<p><em>Ajouter</em> <span data-ingredient data-amount="150.0" data-unit="g" data-name="de coco râpée">150 g de coco râpée</span>.</p>
+<p><em>Ajouter</em> <span data-ingredient data-amount="150.0" data-unit="g" data-name="de coco râpée" data-ml="428.57">150 g de coco râpée</span>.</p>
 <h2>Étape 3</h2>
 <p><em>Incorporer</em> les <span data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeuf">3 blancs d&#x27;oeuf</span> montés en neige.</p>
 <h2>Étape 4 (Option 1)</h2>
@@ -53,7 +69,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>

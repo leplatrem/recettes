@@ -3,9 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>P&#x27;tits bouchons à la châtaigne</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="Préchauffer le four à 175ºC (th. 6).">
+    <meta property="og:title" content="P&#x27;tits bouchons à la châtaigne">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/bouchons-chataigne.html">
+    <meta property="og:description" content="Préchauffer le four à 175ºC (th. 6).">
+    <meta property="article:tag" content="dessert">
+    <meta property="article:tag" content="gâteau">
+    <meta property="article:tag" content="facile">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,20 +36,24 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" hidden>
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count"></strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="380.0" data-unit="g" data-name="de crème de marrons vanillée">380 g de crème de marrons vanillée</li><li data-ingredient data-amount="80.0" data-unit="g" data-name="de beurre fondu">80 g de beurre fondu</li><li data-ingredient data-amount="2.0" data-unit="" data-name="gros oeufs">2 gros oeufs</li><li data-ingredient>moule à muffins</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="380.0" data-unit="g" data-name="de crème de marrons vanillée" data-ml="380.0">380 g de crème de marrons vanillée</li><li data-ingredient data-amount="80.0" data-unit="g" data-name="de beurre fondu" data-ml="87.91">80 g de beurre fondu</li><li data-ingredient data-amount="2.0" data-unit="" data-name="gros oeufs">2 gros oeufs</li><li data-ingredient>moule à muffins</li></ul>
         </section>
         
         <div class="recipe-content" id="recipe-content"><h1>Préparation</h1>
 <h2>Étape 1</h2>
 <p><em>Préchauffer</em> le four à <strong>175ºC</strong> (th. 6).</p>
 <h2>Étape 2</h2>
-<p><em>Mélanger</em> <span data-ingredient data-amount="380.0" data-unit="g" data-name="de crème de marrons vanillée">380 g de crème de marrons vanillée</span> avec <span data-ingredient data-amount="80.0" data-unit="g" data-name="de beurre fondu">80 g de beurre fondu</span>.</p>
+<p><em>Mélanger</em> <span data-ingredient data-amount="380.0" data-unit="g" data-name="de crème de marrons vanillée" data-ml="380.0">380 g de crème de marrons vanillée</span> avec <span data-ingredient data-amount="80.0" data-unit="g" data-name="de beurre fondu" data-ml="87.91">80 g de beurre fondu</span>.</p>
 <h2>Étape 3</h2>
 <p><em>Ajouter</em> <span data-ingredient data-amount="2.0" data-unit="" data-name="gros oeufs">2 gros oeufs</span> entiers. Bien mélanger.</p>
 <h2>Étape 4</h2>
@@ -49,7 +65,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>

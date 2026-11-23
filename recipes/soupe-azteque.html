@@ -3,9 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>Soupe aztèque</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="D’Ari.">
+    <meta property="og:title" content="Soupe aztèque">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/soupe-azteque.html">
+    <meta property="og:description" content="D’Ari.">
+    <meta property="article:tag" content="plat">
+    <meta property="article:tag" content="soupe">
+    <meta property="article:tag" content="végétarien">
+    <meta property="article:tag" content="vegan">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,13 +37,17 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" hidden>
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count"></strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="12.0" data-unit="" data-name="petites tomates">12 petites tomates</li><li data-ingredient data-amount="1.0" data-unit="" data-name="oignon rouge moyen">1 oignon rouge moyen</li><li data-ingredient data-amount="3.0" data-unit="" data-name="gousses d&#x27;ail">3 gousses d&#x27;ail</li><li data-ingredient data-amount="2.0" data-unit="" data-name="piments chipotle">2 piments chipotle</li><li data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de pâte d&#x27;ají panca">2 c. à s. de pâte d&#x27;ají panca</li><li data-ingredient>eau</li><li data-ingredient>sel</li><li data-ingredient>huile d&#x27;olive</li><li data-ingredient data-amount="6.0" data-unit="" data-name="tortillas de maïs">6 tortillas de maïs</li><li data-ingredient>avocat</li><li data-ingredient data-amount="1.0" data-unit="" data-name="morceau d&#x27;oignon rouge">1 morceau d&#x27;oignon rouge</li><li data-ingredient>coriandre</li><li data-ingredient>citron vert</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="12.0" data-unit="" data-name="petites tomates">12 petites tomates</li><li data-ingredient data-amount="1.0" data-unit="" data-name="oignon rouge moyen">1 oignon rouge moyen</li><li data-ingredient data-amount="3.0" data-unit="" data-name="gousses d&#x27;ail">3 gousses d&#x27;ail</li><li data-ingredient data-amount="2.0" data-unit="" data-name="piments chipotle">2 piments chipotle</li><li data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de pâte d&#x27;ají panca" data-ml="30.0">2 c. à s. de pâte d&#x27;ají panca</li><li data-ingredient>eau</li><li data-ingredient>sel</li><li data-ingredient>huile d&#x27;olive</li><li data-ingredient data-amount="6.0" data-unit="" data-name="tortillas de maïs">6 tortillas de maïs</li><li data-ingredient>avocat</li><li data-ingredient data-amount="1.0" data-unit="" data-name="morceau d&#x27;oignon rouge">1 morceau d&#x27;oignon rouge</li><li data-ingredient>coriandre</li><li data-ingredient>citron vert</li></ul>
         </section>
         
         <div class="recipe-content" id="recipe-content"><p>D’Ari.</p>
@@ -38,7 +55,7 @@
 <h2>Étape 1</h2>
 <p><em>Mettre au four</em> <span data-ingredient data-amount="12.0" data-unit="" data-name="petites tomates">12 petites tomates</span> entières, <span data-ingredient data-amount="1.0" data-unit="" data-name="oignon rouge moyen">1 oignon rouge moyen</span> entier et <span data-ingredient data-amount="3.0" data-unit="" data-name="gousses d&#x27;ail">3 gousses d&#x27;ail</span>.</p>
 <h2>Étape 2</h2>
-<p>Une fois cuits, les éplucher et les <em>mixer</em> avec <span data-ingredient data-amount="2.0" data-unit="" data-name="piments chipotle">2 piments chipotle</span>, <span data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de pâte d&#x27;ají panca">2 c. à s. de pâte d&#x27;ají panca</span>, de l’<span data-ingredient>eau</span> et du <span data-ingredient>sel</span>.</p>
+<p>Une fois cuits, les éplucher et les <em>mixer</em> avec <span data-ingredient data-amount="2.0" data-unit="" data-name="piments chipotle">2 piments chipotle</span>, <span data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de pâte d&#x27;ají panca" data-ml="30.0">2 c. à s. de pâte d&#x27;ají panca</span>, de l’<span data-ingredient>eau</span> et du <span data-ingredient>sel</span>.</p>
 <h2>Étape 3</h2>
 <p>Verser dans une casserole et <em>cuire</em> environ 15min. Ajuster l’eau selon que l’on veut la soupe plus liquide ou plus épaisse.</p>
 <h2>Étape 4</h2>
@@ -56,7 +73,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>

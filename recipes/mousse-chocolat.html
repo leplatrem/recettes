@@ -3,9 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>Mousse au chocolat</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="Fondre 200g de chocolat avec un peu de beurre.">
+    <meta property="og:title" content="Mousse au chocolat">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/mousse-chocolat.html">
+    <meta property="og:description" content="Fondre 200g de chocolat avec un peu de beurre.">
+    <meta property="article:tag" content="dessert">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,18 +34,22 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" data-portions="6">
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count">6</strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="200.0" data-unit="g" data-name="de chocolat">200 g de chocolat</li><li data-ingredient>beurre</li><li data-ingredient data-amount="6.0" data-unit="" data-name="oeufs">6 oeufs</li><li data-ingredient data-amount="2.0" data-unit="" data-name="sachets de sucre vanillé">2 sachets de sucre vanillé</li><li data-ingredient>pincée de sel</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="200.0" data-unit="g" data-name="de chocolat" data-ml="333.33">200 g de chocolat</li><li data-ingredient>beurre</li><li data-ingredient data-amount="6.0" data-unit="" data-name="oeufs">6 oeufs</li><li data-ingredient data-amount="2.0" data-unit="" data-name="sachets de sucre vanillé">2 sachets de sucre vanillé</li><li data-ingredient>pincée de sel</li></ul>
         </section>
         
         <div class="recipe-content" id="recipe-content"><h1>Préparation</h1>
 <h2>Étape 1</h2>
-<p><em>Fondre</em> <span data-ingredient data-amount="200.0" data-unit="g" data-name="de chocolat">200 g de chocolat</span> avec un peu de <span data-ingredient>beurre</span>.</p>
+<p><em>Fondre</em> <span data-ingredient data-amount="200.0" data-unit="g" data-name="de chocolat" data-ml="333.33">200 g de chocolat</span> avec un peu de <span data-ingredient>beurre</span>.</p>
 <h2>Étape 2</h2>
 <p><em>Séparer les blancs des jaunes</em> de <span data-ingredient data-amount="6.0" data-unit="" data-name="oeufs">6 oeufs</span>. <em>Incorporer</em> les jaunes et <span data-ingredient data-amount="2.0" data-unit="" data-name="sachets de sucre vanillé">2 sachets de sucre vanillé</span> au chocolat.</p>
 <h2>Étape 3</h2>
@@ -49,7 +63,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>

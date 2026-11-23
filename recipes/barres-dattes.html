@@ -3,9 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>Barres aux dattes</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="Mélanger 200g de flocons d’avoine, 150g de courge, 80ml d’huile de coco, 80ml de tahin, 125ml de sirop d’érable, 1 cac de vanille, 3 blancs d’oeufs, 30g de graines de tournesol, 4">
+    <meta property="og:title" content="Barres aux dattes">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/barres-dattes.html">
+    <meta property="og:description" content="Mélanger 200g de flocons d’avoine, 150g de courge, 80ml d’huile de coco, 80ml de tahin, 125ml de sirop d’érable, 1 cac de vanille, 3 blancs d’oeufs, 30g de graines de tournesol, 4">
+    <meta property="og:image" content="https://leplatrem.github.io/recettes/assets/images/barres-dattes.jpeg">
+    <meta property="article:tag" content="snack">
+    <meta property="article:tag" content="sain">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,18 +36,22 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" hidden>
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count"></strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="200.0" data-unit="g" data-name="de flocons d&#x27;avoine">200 g de flocons d&#x27;avoine</li><li data-ingredient data-amount="150.0" data-unit="g" data-name="de courge">150 g de courge</li><li data-ingredient data-amount="80.0" data-unit="ml" data-name="d&#x27;huile de coco">80 ml d&#x27;huile de coco</li><li data-ingredient data-amount="80.0" data-unit="ml" data-name="de tahin">80 ml de tahin</li><li data-ingredient data-amount="125.0" data-unit="ml" data-name="de sirop d&#x27;érable">125 ml de sirop d&#x27;érable</li><li data-ingredient data-amount="1.0" data-unit="c. à c." data-name="de vanille">1 c. à c. de vanille</li><li data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeufs">3 blancs d&#x27;oeufs</li><li data-ingredient data-amount="30.0" data-unit="g" data-name="de graines de tournesol">30 g de graines de tournesol</li><li data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de lin">4 c. à s. de graines de lin</li><li data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de chanvre">4 c. à s. de graines de chanvre</li><li data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de sésame">2 c. à s. de sésame</li><li data-ingredient data-amount="50.0" data-unit="g" data-name="de coco râpée">50 g de coco râpée</li><li data-ingredient data-amount="10.0" data-unit="" data-name="dattes medjool">10 dattes medjool</li><li data-ingredient data-amount="0.5" data-unit="c. à c." data-name="de sel">0.5 c. à c. de sel</li><li data-ingredient>chocolat noir</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="200.0" data-unit="g" data-name="de flocons d&#x27;avoine" data-ml="500.0">200 g de flocons d&#x27;avoine</li><li data-ingredient data-amount="150.0" data-unit="g" data-name="de courge">150 g de courge</li><li data-ingredient data-amount="80.0" data-unit="ml" data-name="d&#x27;huile de coco" data-ml="80.0">80 ml d&#x27;huile de coco</li><li data-ingredient data-amount="80.0" data-unit="ml" data-name="de tahin" data-ml="80.0">80 ml de tahin</li><li data-ingredient data-amount="125.0" data-unit="ml" data-name="de sirop d&#x27;érable" data-ml="125.0">125 ml de sirop d&#x27;érable</li><li data-ingredient data-amount="1.0" data-unit="c. à c." data-name="de vanille" data-ml="5.0">1 c. à c. de vanille</li><li data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeufs">3 blancs d&#x27;oeufs</li><li data-ingredient data-amount="30.0" data-unit="g" data-name="de graines de tournesol" data-ml="50.0">30 g de graines de tournesol</li><li data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de lin" data-ml="60.0">4 c. à s. de graines de lin</li><li data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de chanvre" data-ml="60.0">4 c. à s. de graines de chanvre</li><li data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de sésame" data-ml="30.0">2 c. à s. de sésame</li><li data-ingredient data-amount="50.0" data-unit="g" data-name="de coco râpée" data-ml="142.86">50 g de coco râpée</li><li data-ingredient data-amount="10.0" data-unit="" data-name="dattes medjool">10 dattes medjool</li><li data-ingredient data-amount="0.5" data-unit="c. à c." data-name="de sel" data-ml="2.5">0.5 c. à c. de sel</li><li data-ingredient>chocolat noir</li></ul>
         </section>
         <figure class="recipe-main-image"><img src="../assets/images/barres-dattes.jpeg" alt="Barres aux dattes"></figure>
         <div class="recipe-content" id="recipe-content"><h1>Préparation</h1>
 <h2>Étape 1</h2>
-<p><em>Mélanger</em> <span data-ingredient data-amount="200.0" data-unit="g" data-name="de flocons d&#x27;avoine">200 g de flocons d&#x27;avoine</span>, <span data-ingredient data-amount="150.0" data-unit="g" data-name="de courge">150 g de courge</span>, <span data-ingredient data-amount="80.0" data-unit="ml" data-name="d&#x27;huile de coco">80 ml d&#x27;huile de coco</span>, <span data-ingredient data-amount="80.0" data-unit="ml" data-name="de tahin">80 ml de tahin</span>, <span data-ingredient data-amount="125.0" data-unit="ml" data-name="de sirop d&#x27;érable">125 ml de sirop d&#x27;érable</span>, <span data-ingredient data-amount="1.0" data-unit="c. à c." data-name="de vanille">1 c. à c. de vanille</span>, <span data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeufs">3 blancs d&#x27;oeufs</span>, <span data-ingredient data-amount="30.0" data-unit="g" data-name="de graines de tournesol">30 g de graines de tournesol</span>, <span data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de lin">4 c. à s. de graines de lin</span>, <span data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de chanvre">4 c. à s. de graines de chanvre</span>, <span data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de sésame">2 c. à s. de sésame</span>, <span data-ingredient data-amount="50.0" data-unit="g" data-name="de coco râpée">50 g de coco râpée</span>, <span data-ingredient data-amount="10.0" data-unit="" data-name="dattes medjool">10 dattes medjool</span> et <span data-ingredient data-amount="0.5" data-unit="c. à c." data-name="de sel">0.5 c. à c. de sel</span>.</p>
+<p><em>Mélanger</em> <span data-ingredient data-amount="200.0" data-unit="g" data-name="de flocons d&#x27;avoine" data-ml="500.0">200 g de flocons d&#x27;avoine</span>, <span data-ingredient data-amount="150.0" data-unit="g" data-name="de courge">150 g de courge</span>, <span data-ingredient data-amount="80.0" data-unit="ml" data-name="d&#x27;huile de coco" data-ml="80.0">80 ml d&#x27;huile de coco</span>, <span data-ingredient data-amount="80.0" data-unit="ml" data-name="de tahin" data-ml="80.0">80 ml de tahin</span>, <span data-ingredient data-amount="125.0" data-unit="ml" data-name="de sirop d&#x27;érable" data-ml="125.0">125 ml de sirop d&#x27;érable</span>, <span data-ingredient data-amount="1.0" data-unit="c. à c." data-name="de vanille" data-ml="5.0">1 c. à c. de vanille</span>, <span data-ingredient data-amount="3.0" data-unit="" data-name="blancs d&#x27;oeufs">3 blancs d&#x27;oeufs</span>, <span data-ingredient data-amount="30.0" data-unit="g" data-name="de graines de tournesol" data-ml="50.0">30 g de graines de tournesol</span>, <span data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de lin" data-ml="60.0">4 c. à s. de graines de lin</span>, <span data-ingredient data-amount="4.0" data-unit="c. à s." data-name="de graines de chanvre" data-ml="60.0">4 c. à s. de graines de chanvre</span>, <span data-ingredient data-amount="2.0" data-unit="c. à s." data-name="de sésame" data-ml="30.0">2 c. à s. de sésame</span>, <span data-ingredient data-amount="50.0" data-unit="g" data-name="de coco râpée" data-ml="142.86">50 g de coco râpée</span>, <span data-ingredient data-amount="10.0" data-unit="" data-name="dattes medjool">10 dattes medjool</span> et <span data-ingredient data-amount="0.5" data-unit="c. à c." data-name="de sel" data-ml="2.5">0.5 c. à c. de sel</span>.</p>
 <div class="recipe-step-images"><figure><img loading="lazy" src="../assets/images/barres-dattes-etape-1.jpeg" alt="Barres aux dattes – Étape 1"></figure></div>
 <h2>Étape 2</h2>
 <p><em>Enfourner</em> à <strong>150ºC</strong> pendant 40min.</p>
@@ -53,7 +69,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>

@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#181a16" media="(prefers-color-scheme: dark)">
     <title>Pâte à galettes de sarrasin</title>
-    <link rel="stylesheet" href="../assets/style.css?v=793c1bb4d5">
-    <script type="module" src="../assets/recipe.js?v=911730d1f5"></script>
+    <meta name="description" content="Ou farine de blé noir.">
+    <meta property="og:title" content="Pâte à galettes de sarrasin">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Mes Recettes">
+    <meta property="og:url" content="https://leplatrem.github.io/recettes/recipes/pate-galettes.html">
+    <meta property="og:description" content="Ou farine de blé noir.">
+    <meta property="article:tag" content="base">
+    <meta property="article:tag" content="gluten-free">
+    <link rel="stylesheet" href="../assets/style.css?v=94e42c5910">
+    <script type="module" src="../assets/recipe.js?v=52aa9f806a"></script>
   </head>
   <body>
     <nav class="detail-nav">
@@ -24,24 +35,28 @@
         <section class="ingredients">
           <div class="ingredients-heading">
             <h2 class="ingredients-title">Ingredients</h2>
+            <label class="simple-toggle" title="🥛 = 200 ml, 🥄 = 15 ml">
+              <input type="checkbox" id="simple-toggle" role="switch">
+              <span>Simple</span>
+            </label>
             <div class="servings" id="servings-control" data-portions="8">
               <button type="button" data-servings-step="-1" aria-label="Decrease servings">−</button>
               <span><strong id="servings-count">8</strong>×</span>
               <button type="button" data-servings-step="1" aria-label="Increase servings">+</button>
             </div>
           </div>
-          <ul id="ingredient-list"><li data-ingredient data-amount="300.0" data-unit="g" data-name="de farine de sarrasin">300 g de farine de sarrasin</li><li data-ingredient data-amount="10.0" data-unit="g" data-name="de sel">10 g de sel</li><li data-ingredient data-amount="1.0" data-unit="" data-name="oeuf">1 oeuf</li><li data-ingredient data-amount="75.0" data-unit="cl" data-name="d&#x27;eau">75 cl d&#x27;eau</li></ul>
+          <ul id="ingredient-list"><li data-ingredient data-amount="300.0" data-unit="g" data-name="de farine de sarrasin" data-ml="545.45">300 g de farine de sarrasin</li><li data-ingredient data-amount="10.0" data-unit="g" data-name="de sel" data-ml="8.33">10 g de sel</li><li data-ingredient data-amount="1.0" data-unit="" data-name="oeuf">1 oeuf</li><li data-ingredient data-amount="75.0" data-unit="cl" data-name="d&#x27;eau" data-ml="750.0">75 cl d&#x27;eau</li></ul>
         </section>
         
         <div class="recipe-content" id="recipe-content"><p>Ou farine de blé noir.</p>
 <h1>Préparation</h1>
-<p><em>Mélanger</em> <span data-ingredient data-amount="300.0" data-unit="g" data-name="de farine de sarrasin">300 g de farine de sarrasin</span>, <span data-ingredient data-amount="10.0" data-unit="g" data-name="de sel">10 g de sel</span>, <span data-ingredient data-amount="1.0" data-unit="" data-name="oeuf">1 oeuf</span>, et <em>incorporer</em> petit à petit <span data-ingredient data-amount="75.0" data-unit="cl" data-name="d&#x27;eau">75 cl d&#x27;eau</span> en gardant le mélange homogène.</p>
+<p><em>Mélanger</em> <span data-ingredient data-amount="300.0" data-unit="g" data-name="de farine de sarrasin" data-ml="545.45">300 g de farine de sarrasin</span>, <span data-ingredient data-amount="10.0" data-unit="g" data-name="de sel" data-ml="8.33">10 g de sel</span>, <span data-ingredient data-amount="1.0" data-unit="" data-name="oeuf">1 oeuf</span>, et <em>incorporer</em> petit à petit <span data-ingredient data-amount="75.0" data-unit="cl" data-name="d&#x27;eau" data-ml="750.0">75 cl d&#x27;eau</span> en gardant le mélange homogène.</p>
 </div>
         <div class="recipe-gallery" id="recipe-gallery"></div>
       </article>
     </main>
     <footer class="site-footer">
-      Built with
+      <a href="https://creativecommons.org/licenses/by/4.0/">Copyrights CC-BY</a> — Built with
       <a href="https://github.com/leplatrem/python-recettes">Recettes</a>, the free software
       that turns Markdown files into a recipes website.
     </footer>
