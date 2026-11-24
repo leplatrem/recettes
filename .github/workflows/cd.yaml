@@ -33,7 +33,7 @@ jobs:
           key: recettes-images-${{ github.sha }}
           restore-keys: recettes-images-
       - name: Build recipe website
-        run: recettes build recipes --destination site --title "Mes Recettes"
+        run: recettes build recipes --destination site --title "Mes Recettes" --lang fr
       - name: Save picture cache
         if: steps.cache-key.outputs.key != steps.restore-cache.outputs.cache-matched-key
         uses: actions/cache/save@v4
