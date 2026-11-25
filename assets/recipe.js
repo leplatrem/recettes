@@ -57,9 +57,26 @@ function updateQuantities() {
   }
 }
 
-simpleToggle.checked = localStorage.getItem(SIMPLE_KEY) === "1";
+// Storage can be unavailable (e.g. blocked cookies): the switch then works for the page only.
+function loadPreference() {
+  try {
+    return localStorage.getItem(SIMPLE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function savePreference(value) {
+  try {
+    localStorage.setItem(SIMPLE_KEY, value ? "1" : "0");
+  } catch {
+    // Not remembered for the next pages.
+  }
+}
+
+simpleToggle.checked = loadPreference();
 simpleToggle.addEventListener("change", () => {
-  localStorage.setItem(SIMPLE_KEY, simpleToggle.checked ? "1" : "0");
+  savePreference(simpleToggle.checked);
   updateQuantities();
 });
 
